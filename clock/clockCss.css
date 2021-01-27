@@ -2,15 +2,9 @@
 	zoom: 1.0;
 	width: extend-to-zoom;
 }
-@-ms-viewport {
-	zoom: 1.0;
-	width: extend-to-zoom;
-}
-body {
-	background: linear-gradient(to right, #00b4db, #0083e5);
-}
 .window {
 	position: absolute;
+	background: linear-gradient(to right, #00b4db, #0083e5);
 	display: flex;
 	min-width: 400px;
 	min-height: 400px;
