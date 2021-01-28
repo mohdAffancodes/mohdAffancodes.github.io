@@ -4,6 +4,8 @@
 }
 body {
 	background: rgb(0, 140, 255);
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 .window {
 	position: absolute;
