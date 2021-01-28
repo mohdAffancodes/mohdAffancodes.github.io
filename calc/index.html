@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator2</title>
+
+<script>
+//Functions
+function myClearFunction()
+{
+  document.getElementById("display").value=''; //Clears the answer textbox 
+}
+function btnBackspace()
+{
+  var ans = document.getElementById("display").value;
+  var bs = ans.substring(0,(ans.length-1));
+  document.getElementById("display").value = bs; 
+}
+</script>
+
+</head>
+<style>
+table
+{
+  background-color:white;
+  border:3px solid #04228c;
+}
+td
+{
+  border:1.5px solid #04228c;
+}
+.tbAns
+{
+  text-align:right;
+  width:230px;
+}
+td
+{
+  text-align:center;
+}
+input
+{
+  font-family:Verdana;
+  font-weight:700;
+  font-size:30px;
+  background-color:white;
+  border:2px solid white;
+}
+.bspButton
+{
+  font-weight:900;  
+  font-family:Impact;
+}
+.tdWidth
+{
+  width:55px;
+}
+</style>
+<body>
+  <form name="calculator">
+  <table cellspacing="0">
+    <tr>
+      <td colspan="4"><input type="text" name="display" id="display" class="tbAns" readonly="yes" placeholder="Answer" maxlength="50"></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="one" value="1" onClick="calculator.display.value += '1'"></td>
+      <td><input type="button" name="two" value="2" onClick="calculator.display.value += '2'"></td>
+      <td><input type="button" name="three" value="3" onClick="calculator.display.value += '3'"></td>
+      <td><input type="button" name="plus" value="+" class="operator" onClick="calculator.display.value += '+'"></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="four" value="4" onClick="calculator.display.value += '4'"></td>
+      <td><input type="button" name="five" value="5" onClick="calculator.display.value += '5'"></td>
+      <td><input type="button" name="six" value="6" onClick="calculator.display.value += '6'"></td>
+      <td><input type="button" name="minus" value="-" class="operator" onClick="calculator.display.value += '-'"></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="seven" value="7" onClick="calculator.display.value += '7'"></td>
+      <td><input type="button" name="eight" value="8" onClick="calculator.display.value += '8'"></td>
+      <td><input type="button" name="nine" value="9" onClick="calculator.display.value += '9'"></td>
+      <td><input type="button" name="mult" value="*" class="operator" onClick="calculator.display.value += '*'"></td>
+    </tr>
+    <tr>
+      <td class="tdWidth"><img src="images/backArrow.jpg" height="40" id="backspace" name="backspace" onClick="btnBackspace()" class=""></td>
+      <td><input type="button" name="zero" value="0" onClick="calculator.display.value += '0'"></td>
+      <td><input type="button" name="decimal" value="." onClick="calculator.display.value += '.'"></td>
+      <td><input type="button" name="div" value="/" class="operator" onClick="calculator.display.value += '/'"></td>
+    </tr>
+    <tr>
+      <td><input type="button" id="clear" name="clear" value="C" onClick="myClearFunction()"></td>
+      <td class="tdWidth"><input type="button" name="openBracket" value="(" onClick="calculator.display.value += '('"></td>
+      <td class="tdWidth"><input type="button" name="closeBracket" value=")" onClick="calculator.display.value += ')'"></td>
+      <td class="tdWidth"><input type="button" name="doit" value="=" onClick="calculator.display.value = eval(calculator.display.value)"></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>
