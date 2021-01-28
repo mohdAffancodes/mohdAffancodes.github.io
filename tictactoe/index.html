@@ -74,14 +74,17 @@ function randomNumber(min, max) {
 
 window.onload = () => {
     requestAnimationFrame(drawEverything);
-    canvas.addEventListener('mousedown',giveDrawInfo);
-    canvas.addEventListener('touchstart',giveDrawInfo);
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        canvas.addEventListener('touchstart',giveDrawInfo);
+    }else {
+        canvas.addEventListener('mousedown',giveDrawInfo);
+    }
 }
 
 function giveDrawInfo(evt) {
-    let mousePos = calMousePos(evt);
+    let eventPos = calMousePos(evt);
     for (let i = 0; i < blockArray.length; i++) {
-        if((mousePos.x > blockArray[i].x && mousePos.x < blockArray[i].x + bSize) && (mousePos.y > blockArray[i].y && mousePos.y < blockArray[i].y + bSize)) {
+        if((eventPos.x > blockArray[i].x && eventPos.x < blockArray[i].x + bSize) && (eventPos.y > blockArray[i].y && eventPos.y < blockArray[i].y + bSize)) {
             //console.log(blockArray[i]);
             if(random == 1) {
                 if(blockArray[i].cross == false) {

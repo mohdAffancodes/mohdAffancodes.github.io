@@ -144,7 +144,11 @@ function fnGameOver() {
 	
 	zoneDivs[0].innerHTML = "";
 
-	zoneDivs[1].innerHTML = "<p style='text-align:center;'>" + "TOUCH OR PRESS ANY KEY TO RESTART" + "</p>";
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        zoneDivs[1].innerHTML = "<p style='text-align:center;'>" + "TOUCH TO RESTART" + "</p>";
+    }else {
+        zoneDivs[1].innerHTML = "<p style='text-align:center;'>" + "PRESS ANY KEY TO RESTART" + "</p>";
+    }
 
 	zoneDivs[2].style.top = 5 + "px";
 	zoneDivs[2].style.left = 5 + "px";
