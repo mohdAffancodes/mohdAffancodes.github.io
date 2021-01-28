@@ -73,6 +73,11 @@ function randomNumber(min, max) {
 }
 
 window.onload = () => {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        canvas.style.width = "100%";
+        canvas.style.height = canvas.offsetWidth - canvas.style.borderWidth;
+    } 
+
     requestAnimationFrame(drawEverything);
     canvas.addEventListener('touchstart',giveDrawInfo);
     canvas.addEventListener('mousedown',giveDrawInfo);
