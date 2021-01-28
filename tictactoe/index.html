@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="user-scalable=no ,width=device-width ,  height=device-height ,initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no ,width=device-width ,  height=device-height ,initial-scale=1.0">
     <title>TIC_TAC_TOE</title>
 <style type="text/css">
 @viewport {
@@ -17,14 +17,14 @@ body {
     overflow-y: hidden;
 }
 canvas {
-	border-top:1px solid white;
-	border-left:1px solid white;
-	background-color:black;
+    border-top:1px solid white;
+    border-left:1px solid white;
+    background-color:black;
 }
 h2 {
-	font-size:50px;   
-	margin-top:0px;
-	margin-left:60px;
+    font-size:50px;   
+    margin-top:0px;
+    margin-left:60px;
 }
 </style>
 </head>
@@ -56,15 +56,15 @@ var block9 = {x:bSize*2, y:bSize*2, nut:false, cross:false};
 //array of blocks
 var blockArray = [block1,block2,block3,block4,block5,block6,block7,block8,block9];
 
-function calMousePos(evt) {
+function callEventPos(evt) {
     //This function determines the position of the mouse pointer on the canvas 
     let rect = canvas.getBoundingClientRect();
     let root = document.documentElement;
-    let mouseX = evt.clientX - rect.left - root.scrollLeft;
-    let mouseY = evt.clientY - rect.top - root.scrollTop;
+    let eventX = evt.clientX - rect.left - root.scrollLeft;
+    let eventY = evt.clientY - rect.top - root.scrollTop;
     return {
-        x:mouseX,
-        y:mouseY
+        x:eventX,
+        y:eventY
     }
 }
 
@@ -74,15 +74,12 @@ function randomNumber(min, max) {
 
 window.onload = () => {
     requestAnimationFrame(drawEverything);
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        canvas.addEventListener('touchstart',giveDrawInfo);
-    }else {
-        canvas.addEventListener('mousedown',giveDrawInfo);
-    }
+    canvas.addEventListener('touchstart',giveDrawInfo);
+    canvas.addEventListener('mousedown',giveDrawInfo);
 }
 
 function giveDrawInfo(evt) {
-    let eventPos = calMousePos(evt);
+    let eventPos = callEventPos(evt);
     for (let i = 0; i < blockArray.length; i++) {
         if((eventPos.x > blockArray[i].x && eventPos.x < blockArray[i].x + bSize) && (eventPos.y > blockArray[i].y && eventPos.y < blockArray[i].y + bSize)) {
             //console.log(blockArray[i]);
@@ -113,7 +110,7 @@ function drawEverything() {
     //Nuts and crosses
     for (let i = 0; i < blockArray.length; i++) {
         if(blockArray[i].nut == true) {   
-    		nut(blockArray[i]);
+            nut(blockArray[i]);
         }
         else if(blockArray[i].cross == true) {
            cross(blockArray[i]);
@@ -123,37 +120,37 @@ function drawEverything() {
 }
 
 function pointNut() {
-	//Vertical
-	if((block1.nut == true && block4.nut == true && block7.nut == true) || (block2.nut == true && block5.nut == true && block8.nut == true) || (block3.nut == true && block6.nut == true && block9.nut == true)) {
-		winFunction(nut);
-	}
-	//Horizontal
-	else if((block1.nut == true && block2.nut == true && block3.nut == true) || (block4.nut == true && block5.nut == true && block6.nut == true) || (block7.nut == true && block8.nut == true && block9.nut == true)) {
-		winFunction(nut);
-	}
-	//Diagonal
-	else if((block1.nut == true && block5.nut == true && block9.nut == true) || (block3.nut == true && block5.nut == true && block7.nut == true)) {
-		winFunction(nut);
-	}
-	else {
+    //Vertical
+    if((block1.nut == true && block4.nut == true && block7.nut == true) || (block2.nut == true && block5.nut == true && block8.nut == true) || (block3.nut == true && block6.nut == true && block9.nut == true)) {
+        winFunction(nut);
+    }
+    //Horizontal
+    else if((block1.nut == true && block2.nut == true && block3.nut == true) || (block4.nut == true && block5.nut == true && block6.nut == true) || (block7.nut == true && block8.nut == true && block9.nut == true)) {
+        winFunction(nut);
+    }
+    //Diagonal
+    else if((block1.nut == true && block5.nut == true && block9.nut == true) || (block3.nut == true && block5.nut == true && block7.nut == true)) {
+        winFunction(nut);
+    }
+    else {
         tieFunction();
     }
 }
 
 function pointCross() {
-	//Vertical
-	if((block1.cross == true && block4.cross == true && block7.cross == true) || (block2.cross == true && block5.cross == true && block8.cross == true) || (block3.cross == true && block6.cross == true && block9.cross == true)) {
-		winFunction(cross);
-	}
-	//Horizontal	
-	else if((block1.cross == true && block2.cross == true && block3.cross == true) || (block4.cross == true && block5.cross == true && block6.cross == true) || (block7.cross == true && block8.cross == true && block9.cross == true)) {
-		winFunction(cross);
-	}
-	//Diagonal
-	else if((block1.cross == true && block5.cross == true && block9.cross == true) || (block3.cross == true && block5.cross == true && block7.cross == true)) {
-		winFunction(cross);
-	}
-	else {
+    //Vertical
+    if((block1.cross == true && block4.cross == true && block7.cross == true) || (block2.cross == true && block5.cross == true && block8.cross == true) || (block3.cross == true && block6.cross == true && block9.cross == true)) {
+        winFunction(cross);
+    }
+    //Horizontal    
+    else if((block1.cross == true && block2.cross == true && block3.cross == true) || (block4.cross == true && block5.cross == true && block6.cross == true) || (block7.cross == true && block8.cross == true && block9.cross == true)) {
+        winFunction(cross);
+    }
+    //Diagonal
+    else if((block1.cross == true && block5.cross == true && block9.cross == true) || (block3.cross == true && block5.cross == true && block7.cross == true)) {
+        winFunction(cross);
+    }
+    else {
         tieFunction();
     }
 }
@@ -212,7 +209,7 @@ function cross(block) {//Cross
 }
 
 function nut(block) {//Nut
-	let radius = bSize - 23;
+    let radius = bSize - 23;
     drawCircle((block.x + bSize) - bSize/2,(block.y + bSize) - bSize/2,radius/2,"yellow");
     drawCircle((block.x + bSize) - bSize/2,(block.y + bSize) - bSize/2,(radius/2)-10,blockColor);
 }
@@ -242,3 +239,4 @@ function drawRect(leftX,topY,width,height,drawColor) {
 </script>
 </body>
 </html>
+
