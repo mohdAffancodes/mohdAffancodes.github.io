@@ -213,7 +213,7 @@ function gameOver() {
     			border.style.border = "none";
     			p.style.border = "none";
     			document.getElementById('span').style.visibility = "visible";
-    			document.getElementById('span').innerHTML = "Press to Restart";
+    			document.getElementById('span').innerHTML = "Press any key to Restart";
     			document.getElementById('h1').style.fontSize = 50 + "px";
     			document.getElementById('h1').innerHTML = "GAME" + "<br>" + "OVER" + "<br>" + "<span class='span' id='endScore'>" + "SCORE : " + score + "</span>";
     			document.getElementById('endScore').style.fontSize = 30 + "px";

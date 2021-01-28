@@ -144,7 +144,7 @@ function fnGameOver() {
 	
 	zoneDivs[0].innerHTML = "";
 
-	zoneDivs[1].innerHTML = "<p style='text-align:center;'>" + "PRESS ANY KEY TO RESTART" + "</p>";
+	zoneDivs[1].innerHTML = "<p style='text-align:center;'>" + "TOUCH OR PRESS ANY KEY TO RESTART" + "</p>";
 
 	zoneDivs[2].style.top = 5 + "px";
 	zoneDivs[2].style.left = 5 + "px";
@@ -152,6 +152,9 @@ function fnGameOver() {
 	zoneDivs[2].innerHTML = "GAME" + "<br>" + "OVER";
 
 	window.addEventListener("keydown",() => {
+		setTimeout(() => {location.reload();},1000/5);
+	});
+	window.addEventListener("touchstart",() => {
 		setTimeout(() => {location.reload();},1000/5);
 	});
 }

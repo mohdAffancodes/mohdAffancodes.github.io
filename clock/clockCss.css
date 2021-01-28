@@ -3,12 +3,12 @@
 	width: extend-to-zoom;
 }
 body {
-	background: linear-gradient(to right, #00b4db, #0083e5);
+	background: rgb(0, 140, 255);
 }
 .window {
 	position: absolute;
 	display: flex;
-	min-width: 400px;
+	min-width: 350px;
 	min-height: 400px;
 	top: 0px;
 	bottom: 0px;
