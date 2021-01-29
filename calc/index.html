@@ -1,60 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no ,width=device-width ,  height=device-height ,initial-scale=1.0">
   <title>Calculator2</title>
-
-<script>
-//Functions
-function myClearFunction()
-{
-  document.getElementById("display").value=''; //Clears the answer textbox 
-}
-function btnBackspace()
-{
-  var ans = document.getElementById("display").value;
-  var bs = ans.substring(0,(ans.length-1));
-  document.getElementById("display").value = bs; 
-}
-</script>
-
+  <link rel="stylesheet" href="css.css">
+<script type="text/javascript" src="calcJS.js"></script>
 </head>
-<style>
-table
-{
-  background-color:white;
-  border:3px solid #04228c;
-}
-td
-{
-  border:1.5px solid #04228c;
-}
-.tbAns
-{
-  text-align:right;
-  width:230px;
-}
-td
-{
-  text-align:center;
-}
-input
-{
-  font-family:Verdana;
-  font-weight:700;
-  font-size:30px;
-  background-color:white;
-  border:2px solid white;
-}
-.bspButton
-{
-  font-weight:900;  
-  font-family:Impact;
-}
-.tdWidth
-{
-  width:55px;
-}
-</style>
 <body>
   <form name="calculator">
   <table cellspacing="0">
@@ -80,7 +32,7 @@ input
       <td><input type="button" name="mult" value="*" class="operator" onClick="calculator.display.value += '*'"></td>
     </tr>
     <tr>
-      <td class="tdWidth"><img src="images/backArrow.jpg" height="40" id="backspace" name="backspace" onClick="btnBackspace()" class=""></td>
+      <td class="tdWidth"><img src="backArrow.jpg" height="40" id="backspace" name="backspace" onClick="btnBackspace()" class=""></td>
       <td><input type="button" name="zero" value="0" onClick="calculator.display.value += '0'"></td>
       <td><input type="button" name="decimal" value="." onClick="calculator.display.value += '.'"></td>
       <td><input type="button" name="div" value="/" class="operator" onClick="calculator.display.value += '/'"></td>
