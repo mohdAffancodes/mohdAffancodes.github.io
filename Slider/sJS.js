@@ -48,7 +48,14 @@ function fnVisible() {
 	}
 }
 
-btn.addEventListener("click",() => {
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+	btn.addEventListener("touchstart",fnStart);
+}else {
+    btn.addEventListener("click",fnStart);
+}
+
+
+function fnStart() {
 	fnCutOff();
 	if (gameOver == false) {audio.play();}
 	sliders = document.querySelectorAll(".block");	
@@ -60,7 +67,7 @@ btn.addEventListener("click",() => {
 		fnRAF(fnSlide);	
 	}
 	else if (btn.innerHTML == "STOP") {
-		if(current == 24) {
+		if(current == 24 && gameOver == false) {
 			let random = fnRandomNumber(0, (parent.offsetWidth - parent.style.borderWidth) - sliders[0].offsetWidth);	
 
 			for (let i = 0; i < divNo; i++) {
@@ -79,7 +86,7 @@ btn.addEventListener("click",() => {
 			sliders[current].style.left = sliders[current].offsetLeft + "px";
 		}
 	}
-})
+}
 
 function fnSlide() {	
 	let borderWidth = parseInt(getComputedStyle(parent).borderRightWidth.slice(0, -2));
@@ -87,7 +94,7 @@ function fnSlide() {
 	if(sliders[current].offsetWidth <= 0 && gameOver == false) {fnGameOver();}
 
 	for (let i = current; i < divNo; i++) {		
-		if(sliders[i].offsetLeft + sliders[i].offsetWidth >= (parent.offsetWidth - borderWidth)) {
+		if(sliders[i].offsetLeft + sliders[i].offsetWidth >= (parent.offsetWidth - borderWidth*2)) {
 			speed = -2;
 		}
 		else if(sliders[i].offsetLeft <= 0) {
