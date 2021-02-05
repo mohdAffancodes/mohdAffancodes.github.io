@@ -6,6 +6,9 @@
 	zoom: 1.0;
 	width: extend-to-zoom;
 }
+body {
+	overflow-y: hidden;
+}
 .window {
 	position: absolute;
 	display: block;

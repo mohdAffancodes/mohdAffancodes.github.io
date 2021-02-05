@@ -126,7 +126,7 @@ function game() {
 	raf(game);	
 	blockArray = [block,b2,b3,b4];
 	gapArray = [gap,g2,g3,g4];
-	//if it os blur then thhis code will not work
+	//if it is blur then thhis code will not work
 	if(blur == true) {return;}
     //Block and gap movement
     for (let i = 0; i < blockArray.length; i++) {
