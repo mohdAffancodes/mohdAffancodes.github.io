@@ -39,6 +39,8 @@ window.onload = () => {
 			}
 		}
 	},60);
+
+	btn.addEventListener("click",fnStart);
 }
 
 function fnVisible() {
@@ -47,13 +49,6 @@ function fnVisible() {
 		fnRAF(fnVisible);
 	}
 }
-
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-	btn.addEventListener("touchstart",fnStart);
-}else {
-    btn.addEventListener("click",fnStart);
-}
-
 
 function fnStart() {
 	fnCutOff();
