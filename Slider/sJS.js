@@ -161,7 +161,7 @@ function fnGameOver() {
 		setTimeout(() => {location.reload();},1000/5);
 	});
 	window.addEventListener("touchstart",() => {
-		setTimeout(() => {location.reload();},1000*2);
+		setTimeout(() => {location.reload();},1000/5);
 	});
 }
 
