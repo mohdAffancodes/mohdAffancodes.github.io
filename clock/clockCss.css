@@ -80,3 +80,9 @@ body {
 	font-size: 40px;
 	transform: translate(-50%);
 }
+.copyRight {
+	position: absolute;
+	font-weight: 700;
+	bottom: 0%;
+	right: 0%;
+}

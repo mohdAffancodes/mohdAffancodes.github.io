@@ -67,3 +67,9 @@ h1 {
 	font-size: 20px;
 	color: red;
 }
+.copyRight {
+	position: absolute;
+	font-weight: 700;
+	bottom: 0%;
+	right: 0%;
+}

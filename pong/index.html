@@ -20,6 +20,12 @@
   font-size:15px;
   font-family:Verdana;
 }
+.copyRight {
+	position: fixed;
+	font-weight: 700;
+	bottom: 0%;
+	right: 0%;
+}
 </style>
 </head>
 <body>		
@@ -84,6 +90,7 @@ window.onload = function() {
 function start() {
 	document.getElementById("hide").style.visibility="hidden";// this code hides the button after clicked
 	document.getElementById("para").style.visibility="hidden";
+	document.querySelector(".copyRight").style.bottom = 0 + "%";
 	window.scrollBy(0,100);
 	//This function is of Paramount Importance as it takes the values of the canvas
 	//and makes the animation possible and smoother
@@ -295,6 +302,9 @@ function raf(func) {
 	requestAnimationFrame(func);
 }
 </script>
-<p style="font-size:15px;font-family:Verdana;"><b>HINT:</b> If you wanna pause go to other Window.</p>
+<div>
+	<p style="font-size: 15px;font-family: Verdana;"><b>HINT:</b> If you wanna pause go to other Window.</p>
+	<div class="copyRight">©mohdAffancodes</div>
+</div>
 </body>
 </html>
