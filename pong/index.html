@@ -40,9 +40,12 @@
 	<audio id="myAudio">
 		<source src="../SoundWAV/gmov.wav" type="audio/wav">
 	</audio>	
-	<audio id="myaudio2">
+	<audio id="myAudio2">
 		<source src="../SoundWAV/win.wav" type="audio/wav">
 	</audio>	
+	<audio id="myAudio3">
+		<source src="../SoundWAV/jump2.wav" type="audio/wav">
+	</audio>
 <script>
 //Canvas Vars
 var canvas;
@@ -50,6 +53,7 @@ var canvasContext;
 //Audio vars 
 var audio = document.getElementById('myAudio');
 var audio2 = document.getElementById('myAudio2');
+var collisionAudio = document.getElementById('myAudio3')
 //player vars
 var p1Score = 0;//Player 1 Score
 var p2Score = 0;//Computer Score
@@ -90,7 +94,6 @@ window.onload = function() {
 function start() {
 	document.getElementById("hide").style.visibility="hidden";// this code hides the button after clicked
 	document.getElementById("para").style.visibility="hidden";
-	document.querySelector(".copyRight").style.bottom = 0 + "%";
 	window.scrollBy(0,100);
 	//This function is of Paramount Importance as it takes the values of the canvas
 	//and makes the animation possible and smoother
@@ -178,6 +181,7 @@ function moveEverything() {
 			}
 			else {
 				ballSpeedX = -ballSpeedX;	
+				collisionAudio.play();
 				var angleY = ballY - (leftPaddleY + PADDLE_HEIGHT/2) ;
 				ballSpeedY = Math.round(angleY * 0.35);
 				//console.log(ballSpeedY + ' Left Paddle');			
@@ -210,6 +214,7 @@ function moveEverything() {
 			}
 			else {
 				ballSpeedX = -ballSpeedX;
+				collisionAudio.play();
 				var angleY = ballY - (rightPaddleY + PADDLE_HEIGHT/2) ;
 				ballSpeedY = Math.round(angleY * 0.35);
 				//console.log(ballSpeedY + ' Right Paddle');
@@ -304,7 +309,10 @@ function raf(func) {
 </script>
 <div>
 	<p style="font-size: 15px;font-family: Verdana;"><b>HINT:</b> If you wanna pause go to other Window.</p>
-	<div class="copyRight">©mohdAffancodes</div>
+	<div class="copyRight">
+		©mohdAffancodes
+		<a href="https://github.com/mohdAffancodes/mohdAffancodes.github.io"><img src="../github.png" alt="Error.Image Not Found" width="30"></a>
+	</div>
 </div>
 </body>
 </html>
