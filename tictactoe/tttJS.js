@@ -152,9 +152,7 @@ function pointCross() {
         (block2.cross == true &&
             block5.cross == true &&
             block8.cross == true) ||
-        (block3.cross == true && 
-            block6.cross == true && 
-            block9.cross == true)
+        (block3.cross == true && block6.cross == true && block9.cross == true)
     ) {
         winFunction(cross);
     }
@@ -166,9 +164,7 @@ function pointCross() {
         (block4.cross == true &&
             block5.cross == true &&
             block6.cross == true) ||
-        (block7.cross == true && 
-            block8.cross == true && 
-            block9.cross == true)
+        (block7.cross == true && block8.cross == true && block9.cross == true)
     ) {
         winFunction(cross);
     }
@@ -226,7 +222,7 @@ function tieFunction() {
                 if (mobile == false) {
                     document.getElementById("h2").style.marginLeft = "150px";
                 }
-                //displayimng TIE
+                //displaying TIE
                 document.getElementById("h2").innerHTML = "TIE";
                 //Reloading for new game
                 setTimeout(() => {

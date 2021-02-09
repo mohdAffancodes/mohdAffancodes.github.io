@@ -139,7 +139,7 @@ function game() {
     raf(game);
     blockArray = [block, b2, b3, b4];
     gapArray = [gap, g2, g3, g4];
-    //if it is blur then thhis code will not work
+    //if it is blur then this code will not work
     if (blur == true) {
         return;
     }
@@ -290,7 +290,7 @@ function keyPush(evt) {
     gapArray = [gap, g2, g3, g4];
     let key = evt.which;
     clearInterval(interval);
-    //if it os blur then thhis code will not work
+    //if it os blur then this code will not work
     if (blur == true) {
         return;
     }

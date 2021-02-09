@@ -61,6 +61,7 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     background: -webkit-linear-gradient(left, maroon, red, orange);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

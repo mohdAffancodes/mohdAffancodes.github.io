@@ -165,7 +165,7 @@ function moveEverything() {
             ballY > rightPaddleY + 10 &&
             ballY < rightPaddleY + PADDLE_HEIGHT - 10
         ) {
-            console.log("bichme");
+            //console.log("in between");
             ballX = canvas.width / 2;
             ballY = canvas.height / 2;
             ballSpeedX = -bSXBup;
