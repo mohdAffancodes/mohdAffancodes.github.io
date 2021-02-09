@@ -1,81 +1,80 @@
 @viewport {
-	zoom: 1.0;
-	width: extend-to-zoom;
+    zoom: 1;
+    width: extend-to-zoom;
 }
 @-ms-viewport {
-	zoom: 1.0;
-	width: extend-to-zoom;
+    zoom: 1;
+    width: extend-to-zoom;
 }
 body {
-	overflow-y: hidden;
+    overflow-y: hidden;
 }
 .window {
-	position: absolute;
-	display: block;
-	min-width: 400px;
-	min-height: 500px;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
+    position: absolute;
+    display: block;
+    min-width: 400px;
+    min-height: 500px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
 }
 .parent {
-	margin: 0 auto;
-	position: relative;
-	border: 3px solid black;
-	width: 400px;
-	height: 500px;
+    margin: 0 auto;
+    position: relative;
+    border: 3px solid black;
+    width: 400px;
+    height: 500px;
 }
 .border {
-	margin-left: 0;
-	margin-top: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .child {
-	position: absolute;
-	width: 30px;
-	height: 30px;
-	border-radius: 100%;
-	transition: 0s;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: 0s;
 }
 .block {
-	position: absolute;
-	width: 100%;
-	height: 20px;
+    position: absolute;
+    width: 100%;
+    height: 20px;
 }
 .gap {
-	background-color: white;
-	position: absolute;
-	height: 5%;
+    background-color: white;
+    position: absolute;
+    height: 5%;
 }
-p { 
-	margin-top :15%;
-	text-align: center;
-	font-size: 25px;
-	font-weight: 700;
-	font-family: sans-serif;
+p {
+    margin-top: 15%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: sans-serif;
 }
 h1 {
-	font-family: 'Press Start 2P', cursive;
-	font-size: 35px;
-	text-align: center;
+    font-family: "Press Start 2P", cursive;
+    font-size: 35px;
+    text-align: center;
 }
 .score {
-	font-size: 20px;
-	color: red;
+    font-size: 20px;
+    color: red;
 }
 img {
-	position: absolute;
-	width: 30px;
-	bottom: 5px;
-	left: 5px;
+    position: absolute;
+    width: 30px;
+    bottom: 5px;
+    left: 5px;
 }
 .copyRight {
-	position: absolute;
-	font-weight: 700;
-	bottom: 0%;
-	right: 5px;
+    position: absolute;
+    font-weight: 700;
+    bottom: 0%;
+    right: 5px;
 }
