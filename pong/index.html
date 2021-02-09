@@ -1,9 +1,10 @@
 <html>
+
 <head>
 	<meta charset="utf-8">
 
 	<title>PONG</title>
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
@@ -12,47 +13,52 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-<style>
-.p1{
-  position: absolute;
-  left: 10px;
-  top: 30px;
-  font-size:15px;
-  font-family:Verdana;
-}
-.copyRight {
-	position: fixed;
-	font-weight: 700;
-	bottom: 0%;
-	right: 5px;
-}
-</style>
+	<style>
+		.p1 {
+			position: absolute;
+			left: 10px;
+			top: 30px;
+			font-size: 15px;
+			font-family: Verdana;
+		}
+
+		.copyRight {
+			position: fixed;
+			font-weight: 700;
+			bottom: 0%;
+			right: 5px;
+		}
+	</style>
 </head>
-<body>		
-	<input type="text" name="pName" id="pName" placeholder="Enter your Name" style="font-weight:700;width:150px;"maxlength="15">
+
+<body>
+	<input type="text" name="pName" id="pName" placeholder="Enter your Name" style="font-weight:700;width:150px;"
+		maxlength="15">
 	<button id="hide" style="button" onClick="start()">
 		<b>START</b>
-	</button>	
+	</button>
 	<p class="p1" id="para">To Play the game keep the MOUSE in the GAME AREA.</p>
-		<br><br>
+	<br><br>
 	<canvas id="gameCanvas" width="800" height="600"></canvas>
 
 	<audio id="myAudio">
 		<source src="../SoundWAV/gmov.wav" type="audio/wav">
-	</audio>	
+	</audio>
 	<audio id="myAudio2">
 		<source src="../SoundWAV/win.wav" type="audio/wav">
-	</audio>	
+	</audio>
 	<audio id="myAudio3">
 		<source src="../SoundWAV/jump2.wav" type="audio/wav">
 	</audio>
-<script src="pongJS.js"></script>
-<div>
-	<p style="font-size: 15px;font-family: Verdana;"><b>HINT:</b> If you wanna pause go to other Window.</p>
-	<div class="copyRight">
-		©mohdAffancodes
-		<a href="https://github.com/mohdAffancodes/mohdAffancodes.github.io"><img src="../images/github.png" alt="Error.Image Not Found" width="30"></a>
+	<script src="pongJS.js"></script>
+	<div>
+		<p style="font-size: 15px;font-family: Verdana;"><b>HINT:</b> If you wanna pause go to other Window.</p>
+		<div class="copyRight">
+			©mohdAffancodes
+			<a href="https://github.com/mohdAffancodes/mohdAffancodes.github.io"><img src="../images/github.png"
+					alt="Error.Image Not Found" width="30"></a>
+		</div>
 	</div>
-</div>
 </body>
+
 </html>
