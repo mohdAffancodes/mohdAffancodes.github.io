@@ -66,7 +66,10 @@ function fnStart() {
     } else if (btn.innerHTML == "STOP") {
         if (current == 24 && gameOver == false) {
             let random = fnRandomNumber(
-                0,parent.offsetWidth - parent.style.borderWidth - sliders[0].offsetWidth
+                0,
+                parent.offsetWidth -
+                    parent.style.borderWidth -
+                    sliders[0].offsetWidth
             );
 
             for (let i = 0; i < divNo; i++) {
