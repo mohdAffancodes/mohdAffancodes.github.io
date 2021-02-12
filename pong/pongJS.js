@@ -141,12 +141,13 @@ function moveEverything() {
                 ballReset();
                 console.log("its behind in the left");
             } else {
-                ballSpeedX = -ballSpeedX;
                 collisionAudio.play();
+                ballSpeedX = -ballSpeedX;
                 var angleY = ballY - (leftPaddleY + PADDLE_HEIGHT / 2);
                 ballSpeedY = Math.round(angleY * 0.35);
                 //console.log(ballSpeedY + ' Left Paddle');
             }
+
             if (
                 leftPaddleX &&
                 ballX < leftPaddleX + PADDLE_HEIGHT &&
@@ -185,8 +186,8 @@ function moveEverything() {
                 ballReset();
                 console.log("its behind in the right");
             } else {
-                ballSpeedX = -ballSpeedX;
                 collisionAudio.play();
+                ballSpeedX = -ballSpeedX;
                 var angleY = ballY - (rightPaddleY + PADDLE_HEIGHT / 2);
                 ballSpeedY = Math.round(angleY * 0.35);
                 //console.log(ballSpeedY + ' Right Paddle');

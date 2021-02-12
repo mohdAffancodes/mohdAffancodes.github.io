@@ -16,6 +16,7 @@ var stuckInLeft = false,
 var interval;
 var blur = false;
 var shrunk = false;
+var onBlock = false;
 
 var sound = document.getElementById("myAudio");
 var collide = document.getElementById("myAudio4");
@@ -143,8 +144,22 @@ function game() {
     if (blur == true) {
         return;
     }
-    //Block and gap movement
+
     for (let i = 0; i < blockArray.length; i++) {
+        //gravity
+        if (ball.offsetTop >= p.offsetHeight - 6 - ball.offsetHeight) {
+            ball.style.top = p.offsetHeight - 6 - ball.offsetHeight + "px";
+        } else if (
+            ball.offsetLeft >= gapArray[i].offsetLeft &&
+            ball.offsetLeft + ball.offsetWidth <=
+                gapArray[i].offsetLeft + gapArray[i].offsetWidth
+        ) {
+            onBlock = false;
+            downArray[i] = true;
+        } else if (onBlock == false) {
+            ball.style.top = ball.offsetTop + ballSpeed + "px";
+        }
+        //Block and gap movement
         if (
             blockArray[i].offsetTop >
             p.offsetHeight - blockArray[i].offsetHeight
@@ -193,6 +208,7 @@ function game() {
                     gapArray[i].offsetLeft + gapArray[i].offsetWidth
             ) {
             } else if (ball.offsetTop <= blockArray[i].offsetTop) {
+                onBlock = true;
                 ball.style.top =
                     blockArray[i].offsetTop - ball.offsetHeight - 0.5 + "px";
             }
@@ -342,20 +358,6 @@ function keyPush(evt) {
                     if (stuckInRight == false) {
                         ball.style.left = ball.offsetLeft + ballSpeed + "px";
                     }
-                }
-            } else if (key == 40 || key == 115 || key == 83) {
-                if (ball.offsetTop >= p.offsetHeight - 6 - ball.offsetHeight) {
-                    ball.style.top =
-                        p.offsetHeight - 6 - ball.offsetHeight + "px";
-                } else if (
-                    ball.offsetLeft >= gapArray[i].offsetLeft &&
-                    ball.offsetLeft + ball.offsetWidth <=
-                        gapArray[i].offsetLeft + gapArray[i].offsetWidth
-                ) {
-                    ball.style.top = ball.offsetTop + ballSpeed + "px";
-                    downArray[i] = true;
-                } else {
-                    ball.style.top = ball.offsetTop + ballSpeed + "px";
                 }
             }
         }
