@@ -16,6 +16,23 @@ var speed = 3;
 var current = 0;
 
 window.onload = () => {
+    if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        )
+    ) {
+        if (window.innerHeight < 654) {
+            if (window.innerHeight <= 555) {
+                parent.style.height = 400 + "px";
+                parent.style.width = 320 + "px";
+            } else {
+                parent.style.height = 450 + "px";
+                parent.style.width = 360 + "px";
+            }
+            document.querySelector(".copyRight").style.fontSize = 12 + "px";
+        }
+    }
+
     let sliderDivs;
     //Creating Divs
     for (let i = 0; i < divNo; i++) {
@@ -23,19 +40,9 @@ window.onload = () => {
         sliderDivs.setAttribute("class", "block b" + i);
         zoneDivs[0].before(sliderDivs);
 
-        if (
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                navigator.userAgent
-            )
-        ) {
-            if (window.innerHeight < 654) {
-                parent.style.height = 450 + "px";
-                document.querySelector(".copyRight").style.fontSize = 12 + "px";
-            }
-        }
-
         sliderDivs.style.bottom = i * sliderDivs.offsetHeight;
     }
+    //making the window visible
     document.querySelector(".window").style.backgroundColor = "transparent";
     btn.style.background = "lightGreen";
 
@@ -67,7 +74,7 @@ function fnVisible() {
 }
 
 function fnStart() {
-    fnCutOff();
+    //fnCutOff();
     if (gameOver == false) {
         audio.play();
     }

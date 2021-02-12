@@ -81,13 +81,13 @@ body {
     transform: translate(-50%);
 }
 img {
-    position: absolute;
+    position: fixed;
     width: 30px;
     bottom: 5px;
     left: 5px;
 }
 .copyRight {
-    position: absolute;
+    position: fixed;
     font-weight: 700;
     bottom: 0;
     right: 5px;
