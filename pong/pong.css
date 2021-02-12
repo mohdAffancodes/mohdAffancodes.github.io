@@ -1,0 +1,14 @@
+.p1 {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: 15px;
+    font-family: Verdana;
+}
+
+.copyRight {
+    position: fixed;
+    font-weight: 700;
+    bottom: 0%;
+    right: 5px;
+}
