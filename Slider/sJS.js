@@ -23,8 +23,23 @@ window.onload = () => {
         sliderDivs.setAttribute("class", "block b" + i);
         zoneDivs[0].before(sliderDivs);
 
+        if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            )
+        ) {
+            if (window.innerHeight < 654) {
+                parent.style.height = 450 + "px";
+                document.querySelector(".copyRight").style.fontSize = 12 + "px";
+            }
+        }
+
         sliderDivs.style.bottom = i * sliderDivs.offsetHeight;
     }
+    document.querySelector(".window").style.backgroundColor = "transparent";
+    btn.style.background = "lightGreen";
+
+    document.getElementById("h1").style.visibility = "visible";
 
     scoreInterval = setInterval(() => {
         scoreDisplay.innerHTML = "SCORE" + "<br>" + score;
@@ -52,7 +67,7 @@ function fnVisible() {
 }
 
 function fnStart() {
-    fnCutOff();
+    //fnCutOff();
     if (gameOver == false) {
         audio.play();
     }

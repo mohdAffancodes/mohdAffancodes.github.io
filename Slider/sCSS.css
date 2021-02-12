@@ -13,15 +13,17 @@
     top: 0;
     bottom: 0;
     min-width: 300px;
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     font-family: "Press Start 2P", cursive;
+    background-color: black;
 }
 .parent {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     position: relative;
+    display: flex;
     width: 400px;
     height: 500px;
     border: 3px solid black;
@@ -55,7 +57,8 @@
 .z2 {
     bottom: 66.666666666666%;
 }
-h1 {
+#h1 {
+    visibility: hidden;
     position: absolute;
     top: -15%;
     left: 50%;
@@ -70,7 +73,7 @@ h1 {
     position: absolute;
     border-radius: 10px;
     font-family: "Press Start 2P", cursive;
-    background: lightgreen;
+    background: black;
     font-size: 17px;
     border: 2px solid black;
     left: 50%;
@@ -80,13 +83,13 @@ h1 {
     height: 40px;
 }
 img {
-    position: absolute;
+    position: fixed;
     width: 30px;
     bottom: 5px;
     left: 5px;
 }
 .copyRight {
-    position: absolute;
+    position: fixed;
     font-weight: 700;
     font-family: serif;
     bottom: 0%;
