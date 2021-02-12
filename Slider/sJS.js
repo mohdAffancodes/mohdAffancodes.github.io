@@ -1,4 +1,4 @@
-//constants/elements
+//constants
 const parent = document.querySelector(".parent");
 const scoreDisplay = document.querySelector(".score");
 const zoneDivs = document.querySelectorAll(".zone");
