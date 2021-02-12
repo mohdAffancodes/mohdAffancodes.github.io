@@ -74,7 +74,7 @@ function fnVisible() {
 }
 
 function fnStart() {
-    //fnCutOff();
+    fnCutOff();
     if (gameOver == false) {
         audio.play();
     }
