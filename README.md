@@ -4,7 +4,7 @@ My first repository
 # Mostly JS games
 and a CLOCK website
 
-I have some packages too made with 
+I have some releases too made with 
 # ELECTRON 
 Namely a clock(analogue) deskstop app
 &
