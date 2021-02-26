@@ -2,7 +2,7 @@
 My first repo
 
 # Mostly JS games
-and CLOCK website
+and a CLOCK website
 
 I have some packages too made with 
 # ELECTRON 
