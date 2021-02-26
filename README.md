@@ -15,4 +15,4 @@ An arcade classic BRICK_BREAKER deskstop app
 To see them live type this repository name/any one of my folders except soundWAV and favicons in a browser
 
 For example 
-# https://mohdaffancodes.github.io/Slider
+https://mohdaffancodes.github.io/Slider
