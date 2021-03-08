@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="utf-8" />
+      <title>BRICK_BREAKER</title>
+      <!--favicons-->
+      <link
+         rel="apple-touch-icon"
+         sizes="180x180"
+         href="../favicon/apple-touch-icon.png"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="../favicon/favicon-32x32.png"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="16x16"
+         href="../favicon/favicon-16x16.png"
+      />
+      <link rel="manifest" href="../favicon/site.webmanifest" />
+      <!--fonts-->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+         rel="stylesheet"
+      />
+      <!--css-->
+      <link rel="stylesheet" href="breaker.css" />
+   </head>
 
-<head>
-	<meta charset="utf-8">
-	<title>BRICK_BREAKER</title>
-	<!--favicons-->
-	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-	<link rel="manifest" href="../favicon/site.webmanifest">
-	<!--fonts-->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<!--css-->
-	<link rel="stylesheet" href="breaker.css">
-</head>
+   <body>
+      <canvas
+         id="gameCanvas"
+         width="800"
+         height="600"
+         style="background-color: black"
+      ></canvas>
+      <a href="https://github.com/mohdAffancodes/mohdAffancodes.github.io">
+         <img
+            src="../images/github.png"
+            alt="Error.Image Not Found"
+            style="position: absolute; width: 30px; bottom: 5px; left: 5px"
+         />
+      </a>
+      <div style="position: absolute; font-weight: 700; bottom: 0; right: 5px">
+         ©mohdAffancodes
+      </div>
 
-<body>
-	<canvas id="gameCanvas" width="800" height="600" style="background-color: black;"></canvas>
-	<a href="https://github.com/mohdAffancodes/mohdAffancodes.github.io">
-		<img src="../images/github.png" alt="Error.Image Not Found"
-			style="position: absolute;width: 30px;bottom: 5px;left: 5px;">
-	</a>
-	<div style="position: absolute;font-weight: 700;bottom: 0;right: 5px;">©mohdAffancodes</div>
-
-	<audio id="myAudio">
-		<source src="../SoundWAV/jump2.wav" type="audio/wav">
-	</audio>
-	<audio id="myAudio2">
-		<source src="../SoundWAV/gmov.wav" type="audio/wav">
-	</audio>
-	<audio id="myAudio3">
-		<source src="../SoundWAV/collide2.wav" type="audio/wav">
-	</audio>
-	<audio id="myAudio4">
-		<source src="../SoundWAV/win2.wav" type="audio/wav">
-	</audio>
-	<script src="breakerJs.js"></script>
-</body>
-
+      <audio id="myAudio">
+         <source src="../SoundWAV/jump2.wav" type="audio/wav" />
+      </audio>
+      <audio id="myAudio2">
+         <source src="../SoundWAV/gmov.wav" type="audio/wav" />
+      </audio>
+      <audio id="myAudio3">
+         <source src="../SoundWAV/collide2.wav" type="audio/wav" />
+      </audio>
+      <audio id="myAudio4">
+         <source src="../SoundWAV/win2.wav" type="audio/wav" />
+      </audio>
+      <script src="breakerJs.js"></script>
+   </body>
 </html>
