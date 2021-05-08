@@ -8,7 +8,7 @@ I have some releases too made with
 # ELECTRON 
 Namely a clock(analogue) deskstop app
 &<br><br>
-An arcade classic BRICK_BREAKER deskstop app which has moved its own <a href="https://github.com/mohdAffancodes/brick_breaker">repo</a>
+An arcade classic BRICK_BREAKER deskstop app which has moved to its own <a href="https://github.com/mohdAffancodes/brick_breaker">repo</a>
 
 ### Which work across Windows,Mac & Linux
 
