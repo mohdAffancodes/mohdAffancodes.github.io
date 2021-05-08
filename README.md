@@ -5,7 +5,7 @@ My first repository
 and a CLOCK website
 
 I have some releases too made with 
-# ELECTRON 
+## ELECTRON 
 Namely a clock(analogue) deskstop app
 &<br><br>
 An arcade classic BRICK_BREAKER deskstop app which has moved to its own <a href="https://github.com/mohdAffancodes/brick_breaker">repo</a>
