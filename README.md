@@ -7,10 +7,10 @@ and a CLOCK website
 I have some releases too made with 
 # ELECTRON 
 Namely a clock(analogue) deskstop app
-&
-An arcade classic BRICK_BREAKER deskstop app
+&<br><br>
+An arcade classic BRICK_BREAKER deskstop app which has moved its own <a href="https://github.com/mohdAffancodes/brick_breaker">repo</a>
 
-# Which work across Windows,Mac & Linux
+### Which work across Windows,Mac & Linux
 
 To see them live type this repository name/any one of my folders except soundWAV and favicons in a browser
 
