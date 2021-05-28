@@ -1,39 +1,39 @@
 @viewport {
-    zoom: 1;
-    width: extend-to-zoom;
+   zoom: 1;
+   width: extend-to-zoom;
 }
 
 @-ms-viewport {
-    zoom: 1;
-    width: extend-to-zoom;
+   zoom: 1;
+   width: extend-to-zoom;
 }
 
 body {
-    overflow-y: hidden;
+   overflow-y: hidden;
 }
 
 canvas {
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    background-color: black;
+   border-top: 1px solid white;
+   border-left: 1px solid white;
+   background-color: black;
 }
 
 h2 {
-    font-size: 50px;
-    margin-top: 0px;
-    margin-left: 60px;
+   font-size: 50px;
+   margin-top: 0px;
+   margin-left: 60px;
 }
 
 img {
-    position: absolute;
-    width: 30px;
-    bottom: 5px;
-    left: 5px;
+   position: absolute;
+   width: 30px;
+   bottom: 5px;
+   left: 5px;
 }
 
 .copyRight {
-    position: absolute;
-    font-weight: 700;
-    bottom: 0%;
-    right: 5px;
+   position: absolute;
+   font-weight: 700;
+   bottom: 0%;
+   right: 5px;
 }
